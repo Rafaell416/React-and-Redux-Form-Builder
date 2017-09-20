@@ -9,3 +9,12 @@
 .App-intro {
   font-size: large;
 }
+
+.contenedor-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+   position:fixed;
+   top:500px;
+   right:200px;
+}
