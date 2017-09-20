@@ -1,19 +1,29 @@
 import React, { Component } from 'react'
 import '../Styles/App.css'
+import {
+  Tabs,
+  Tab
+} from 'react-materialize'
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Welcome to React</h2>
+      <div className='container'>
+        <div className="row">
+          <div className='col s12'>
+            <div className="App-header">
+              <h2 className='left'>Form Builder</h2>
+            </div>
+            <div>
+              <Tabs className='tab-demo z-depth-1'>
+                  <Tab title="create" active>create</Tab>
+                  <Tab title="preview" >preview</Tab>
+                  <Tab title="export">export</Tab>
+              </Tabs>
+            </div>
+          </div>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
     )
   }
 }
-
-export default App
