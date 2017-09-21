@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import AddInput from './AddInput'
 import InputCardList from '../Components/InputCardList'
+import SubInputCard from '../Components/SubInputCard'
 import { connect } from 'react-redux'
 import {
   updateInputText, 
@@ -30,6 +31,7 @@ class FormTabs extends Component {
           </Tab>
           <Tab title="preview" >
             preview
+            <SubInputCard />
           </Tab>
           <Tab title="export">
             export
