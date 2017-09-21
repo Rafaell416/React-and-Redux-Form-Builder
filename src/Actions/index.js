@@ -1,8 +1,7 @@
-
-let nextInputId = 0
+import {v4} from 'uuid'
 export const addInput = (questionText, questionType) => ({
   type: 'ADD_INPUT',
-  id: nextInputId++,
+  id: v4(),
   questionText,
   questionType
 })
