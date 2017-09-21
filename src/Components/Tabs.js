@@ -5,7 +5,7 @@ import {
   Tab
 } from 'react-materialize'
 import AddInput from '../Containers/AddInput'
-
+import InputCard from './InputCard'
 
 export default class FormTabs extends Component {
   render(){
@@ -13,11 +13,12 @@ export default class FormTabs extends Component {
       <Tabs className='tab-demo z-depth-1'>
           <Tab title="create" active>
             create input
+            <InputCard />
             <div className='contenedor-flex'>
                 <AddInput />
             </div>
           </Tab>
-          
+
           <Tab title="preview" >
             preview
           </Tab>
