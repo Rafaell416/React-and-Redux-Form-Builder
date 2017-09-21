@@ -16,15 +16,24 @@ export default class InputCard extends Component {
     let updateInputSelect = this.props.updateInputSelect
     let deleteInput = this.props.deleteInput
     let inputId = this.props.keyProp
+    let Id = this.props.keyProp
+
+    let addSubInput = this.props.addSubInput    
+    let condition = 'equals'
+    let answer = 'yes'
+    let questionText = 'Hello World'
+    let questionType = 'yes/no'
     return (
       <Col m={9} s={12}>
-      		<Card key={this.props.keyProp}
+      		<Card key={Id}
             className='grey lighten-2'
             actions={
               [
                 <div className='row'>
                   <div className='col s12 m5 offset-m3'>
-                    <Button waves='light'>Add Sub-Input<Icon right>add</Icon></Button>
+                    <Button waves='light' onClick={()=>addSubInput(Id)}>
+                      Add Sub-Input<Icon right>add</Icon>
+                    </Button>
                   </div>
                   <div className='col s12 m4 right'>
                     <Button waves='light' onClick={()=>deleteInput(inputId)}>

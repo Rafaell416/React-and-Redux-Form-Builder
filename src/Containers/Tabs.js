@@ -6,7 +6,8 @@ import { connect } from 'react-redux'
 import {
   updateInputText, 
   updateInputSelect,
-  deleteInput
+  deleteInput,
+  addSubInput
 } from '../Actions'
 import '../Styles/App.css'
 import {
@@ -24,6 +25,7 @@ class FormTabs extends Component {
               updateInputText={this.props.updateInputText}
               updateInputSelect={this.props.updateInputSelect}
               deleteInput={this.props.deleteInput}
+              addSubInput={this.props.addSubInput}
             />
             <div className='contenedor-flex'>
                 <AddInput />
@@ -48,7 +50,8 @@ let mapStateToProps = (state) => ({
 const mapDispatchToProps = {
   updateInputText,
   updateInputSelect,
-  deleteInput
+  deleteInput,
+  addSubInput
 }
 
 

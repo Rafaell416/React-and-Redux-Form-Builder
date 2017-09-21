@@ -23,3 +23,14 @@ export const deleteInput = (id) => ({
   type: 'DELETE_INPUT',
   id
 })
+
+export const addSubInput = (parentId, condition, answer, questionText, questionType) => ({
+  type: 'ADD_SUB_INPUT',
+  parentId,
+  id: v4(),
+  questionText,
+  questionType,
+  condition,
+  answer
+})
+
