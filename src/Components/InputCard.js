@@ -11,6 +11,8 @@ import {
 
 export default class InputCard extends Component {
   render () {
+    let input = this.props.input
+    console.log('HERE IS THE DATA:',input)
     return (
       <Col m={9} s={12}>
       		<Card key={1}
@@ -28,13 +30,13 @@ export default class InputCard extends Component {
               ]
           }>
       		  <Row>
-              <Input placeholder="Type a Question Here" s={12} m={10} label="Question" />
+              <Input placeholder={input.questionText} s={12} m={10} label="Question" />
             </Row>
             <Row>
             	<Input s={12} m={10}
                 type='select'
                 label="Type"
-                defaultValue='yes/no'
+                defaultValue={input.questionType}
               >
               		<option value='yes/no'>Yes/No</option>
               		<option value='number'>Number</option>
@@ -43,7 +45,7 @@ export default class InputCard extends Component {
             </Row>
       		</Card>
       </Col>
-    
+
     )
   }
 }

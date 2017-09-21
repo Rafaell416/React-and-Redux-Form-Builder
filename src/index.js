@@ -5,6 +5,7 @@ import logger from 'redux-logger'
 import { Provider } from 'react-redux'
 import App from './Components/App'
 import reducer from './Reducers'
+import {addInput} from './Actions'
 
 const store = createStore(
   reducer,
@@ -17,3 +18,5 @@ render(
   </Provider>,
   document.getElementById('root')
 )
+
+store.dispatch(addInput('Hello World', 'yes/no'))
