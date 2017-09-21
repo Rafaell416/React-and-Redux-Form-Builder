@@ -9,6 +9,16 @@ const inputs = (state=[], action) => {
           questionType: action.questionType,
         }
       ]
+    case 'UPDATE_INPUT':
+      return state.map(input =>
+        (input.id === action.id)
+          ? {
+              ...input,
+              questionText: action.newQuestionText,
+              questionType: action.newQuestionType
+            }
+          : input
+      )
     default:
       return state
   }

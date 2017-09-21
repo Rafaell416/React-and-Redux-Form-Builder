@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import AddInput from './AddInput'
 import InputCardList from '../Components/InputCardList'
 import { connect } from 'react-redux'
+import {updateInput} from '../Actions'
 import '../Styles/App.css'
 import {
   Tabs,
@@ -33,8 +34,14 @@ let mapStateToProps = (state) => ({
   inputs: state.inputs
 })
 
+const mapDispatchToProps = {
+  updateInput
+}
+
+
 FormTabs = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(FormTabs)
 
 export default FormTabs
