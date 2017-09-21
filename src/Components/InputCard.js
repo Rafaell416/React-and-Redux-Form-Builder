@@ -12,10 +12,9 @@ import {
 export default class InputCard extends Component {
   render () {
     let input = this.props.input
-    console.log('HERE IS THE DATA:',input)
     return (
       <Col m={9} s={12}>
-      		<Card key={1}
+      		<Card key={this.props.keyProp}
             className='grey lighten-2'
             actions={
               [

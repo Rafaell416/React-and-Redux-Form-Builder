@@ -13,7 +13,7 @@ class FormTabs extends Component {
     return(
       <Tabs className='tab-demo z-depth-1'>
           <Tab title="create" active>
-            <InputCardList />
+            <InputCardList inputs={this.props.inputs}/>
             <div className='contenedor-flex'>
                 <AddInput />
             </div>
@@ -35,6 +35,6 @@ let mapStateToProps = (state) => ({
 
 FormTabs = connect(
   mapStateToProps
-)(InputCardList)
+)(FormTabs)
 
 export default FormTabs
