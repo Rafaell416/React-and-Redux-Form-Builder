@@ -17,8 +17,14 @@ export default class FormTabs extends Component {
                 <AddInput />
             </div>
           </Tab>
-          <Tab title="preview" >preview</Tab>
-          <Tab title="export">export</Tab>
+          
+          <Tab title="preview" >
+            preview
+          </Tab>
+
+          <Tab title="export">
+            export
+          </Tab>
       </Tabs>
     )
   }

@@ -2,7 +2,6 @@ import React from 'react'
 import {render} from 'react-dom'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import './index.css'
 import App from './Components/App'
 import reducer from './Reducers'
 
@@ -14,3 +13,10 @@ render(
   </Provider>,
   document.getElementById('root')
 )
+
+
+let unsubscribe = store.subscribe(() =>
+  console.log(store.getState())
+)
+
+unsubscribe()

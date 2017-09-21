@@ -1,8 +1,7 @@
 
 let nextInputId = 0
-export const addInput = (questionText, questionType) => ({
+export const addInput = (text) => ({
   type: 'ADD_INPUT',
   id: nextInputId++,
-  questionText,
-  questionType
+  text
 })

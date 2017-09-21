@@ -5,8 +5,7 @@ const inputs = (state=[], action) => {
         ...state,
         {
           id: action.id,
-          questionText: action.questionText,
-          questionType: action.questionType
+          questionText: action.text,
         }
       ]
     default:

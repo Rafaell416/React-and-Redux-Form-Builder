@@ -1,16 +1,28 @@
-import React, {Component} from 'react'
-//import {connect} from 'react-redux'
-//import {addInput} from '../Actions'
+import React from 'react'
+import {connect} from 'react-redux'
+import {addInput} from '../Actions'
 import {Button} from 'react-materialize'
 import '../Styles/App.css'
 
 
 
-export default class AddInput extends Component {
-  render(){
+let AddInput = ({dispatch}) => {
     return(
-      //<Button waves='light'>Add Input<Icon right>add</Icon></Button>
-      <Button floating large className='red' id='float' waves='light' icon='add' />
+      <form onSubmit={e => {
+        e.preventDefault()
+        dispatch(addInput('hello'))
+        console.log('submited')
+      }}>
+          <Button floating large
+            className='red'
+            type='submit'
+            id='float'
+            waves='light'
+            icon='add'
+          />
+      </form>
     )
-  }
 }
+
+AddInput = connect()(AddInput)
+export default AddInput
