@@ -14,6 +14,8 @@ export default class InputCard extends Component {
     let input = this.props.input
     let updateInputText = this.props.updateInputText
     let updateInputSelect = this.props.updateInputSelect
+    let deleteInput = this.props.deleteInput
+    let inputId = this.props.keyProp
     return (
       <Col m={9} s={12}>
       		<Card key={this.props.keyProp}
@@ -25,7 +27,9 @@ export default class InputCard extends Component {
                     <Button waves='light'>Add Sub-Input<Icon right>add</Icon></Button>
                   </div>
                   <div className='col s12 m4 right'>
-                    <Button waves='light'>Delete<Icon right>delete</Icon></Button>
+                    <Button waves='light' onClick={()=>deleteInput(inputId)}>
+                      Delete<Icon right>delete</Icon>
+                    </Button>
                   </div>
                 </div>
               ]
@@ -35,7 +39,7 @@ export default class InputCard extends Component {
                 placeholder={input.questionText}
                 s={12} m={10}
                 label="Question"
-                onChange={(e)=>updateInputText(this.props.keyProp,e.target.value)}
+                onChange={(e)=>updateInputText(inputId,e.target.value)}
               />
             </Row>
             <Row>
@@ -43,7 +47,7 @@ export default class InputCard extends Component {
                 type='select'
                 label="Type"
                 defaultValue={input.questionType}
-                onChange={(e)=>updateInputSelect(this.props.keyProp,e.target.value)}
+                onChange={(e)=>updateInputSelect(inputId,e.target.value)}
               >
               		<option value='yes/no'>Yes/No</option>
               		<option value='number'>Number</option>

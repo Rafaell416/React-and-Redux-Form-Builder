@@ -27,6 +27,10 @@ const inputs = (state=[], action) => {
               }
             : input
         )
+    case 'DELETE_INPUT':
+      const inputId = action.id
+      return state.filter(input => input.id !== inputId)
+        
     default:
       return state
   }
