@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {addInput} from '../Actions'
 import {Button} from 'react-materialize'
@@ -6,13 +6,19 @@ import '../Styles/App.css'
 
 
 
-let AddInput = ({dispatch}) => {
+class AddInput extends Component {
+  render(){
+    let question, type
+    let dispatch = this.props.dispatch
     return(
       <form onSubmit={e => {
         e.preventDefault()
-        dispatch(addInput('hello'))
+        dispatch(addInput(question.value, type.value))
         console.log('submited')
       }}>
+      <input ref={q => question = q} />
+      <input ref={t => type = t} />
+
           <Button floating large
             className='red'
             type='submit'
@@ -22,6 +28,7 @@ let AddInput = ({dispatch}) => {
           />
       </form>
     )
+  }
 }
 
 AddInput = connect()(AddInput)

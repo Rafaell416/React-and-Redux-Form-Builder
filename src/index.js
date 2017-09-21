@@ -1,11 +1,15 @@
 import React from 'react'
 import {render} from 'react-dom'
-import { createStore } from 'redux'
+import {applyMiddleware, createStore } from 'redux'
+import logger from 'redux-logger'
 import { Provider } from 'react-redux'
 import App from './Components/App'
 import reducer from './Reducers'
 
-const store = createStore(reducer)
+const store = createStore(
+  reducer,
+  applyMiddleware(logger)
+)
 
 render(
   <Provider store={store}>
@@ -13,10 +17,3 @@ render(
   </Provider>,
   document.getElementById('root')
 )
-
-
-let unsubscribe = store.subscribe(() =>
-  console.log(store.getState())
-)
-
-unsubscribe()
