@@ -14,7 +14,7 @@ export default class InputCard extends Component {
     return (
       <Col m={9} s={12}>
       		<Card key={1}
-            className='grey lighten-3'
+            className='grey lighten-2'
             actions={
               [
                 <div className='row'>
@@ -43,6 +43,7 @@ export default class InputCard extends Component {
             </Row>
       		</Card>
       </Col>
+    
     )
   }
 }

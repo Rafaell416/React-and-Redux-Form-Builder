@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../Styles/App.css'
 import Header from './Header'
-import FormTabs from './Tabs'
+import FormTabs from '../Containers/Tabs'
 
 export default class App extends Component {
   render() {

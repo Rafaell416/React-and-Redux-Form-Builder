@@ -4,15 +4,14 @@ import {
   Tabs,
   Tab
 } from 'react-materialize'
-import AddInput from '../Containers/AddInput'
-import InputCard from './InputCard'
+import AddInput from './AddInput'
+import InputCard from '../Components/InputCard'
 
 export default class FormTabs extends Component {
   render(){
     return(
       <Tabs className='tab-demo z-depth-1'>
           <Tab title="create" active>
-            create input
             <InputCard />
             <div className='contenedor-flex'>
                 <AddInput />
