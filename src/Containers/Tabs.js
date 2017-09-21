@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import AddInput from './AddInput'
 import InputCardList from '../Components/InputCardList'
 import { connect } from 'react-redux'
-import {updateInput} from '../Actions'
+import {updateInputText, updateInputSelect} from '../Actions'
 import '../Styles/App.css'
 import {
   Tabs,
@@ -14,7 +14,11 @@ class FormTabs extends Component {
     return(
       <Tabs className='tab-demo z-depth-1'>
           <Tab title="create" active>
-            <InputCardList inputs={this.props.inputs}/>
+            <InputCardList
+              inputs={this.props.inputs}
+              updateInputText={this.props.updateInputText}
+              updateInputSelect={this.props.updateInputSelect}
+            />
             <div className='contenedor-flex'>
                 <AddInput />
             </div>
@@ -35,7 +39,8 @@ let mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = {
-  updateInput
+  updateInputText,
+  updateInputSelect
 }
 
 

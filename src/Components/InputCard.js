@@ -12,6 +12,8 @@ import {
 export default class InputCard extends Component {
   render () {
     let input = this.props.input
+    let updateInputText = this.props.updateInputText
+    let updateInputSelect = this.props.updateInputSelect
     return (
       <Col m={9} s={12}>
       		<Card key={this.props.keyProp}
@@ -29,13 +31,19 @@ export default class InputCard extends Component {
               ]
           }>
       		  <Row>
-              <Input placeholder={input.questionText} s={12} m={10} label="Question" />
+              <Input
+                placeholder={input.questionText}
+                s={12} m={10}
+                label="Question"
+                onChange={(e)=>updateInputText(this.props.keyProp,e.target.value)}
+              />
             </Row>
             <Row>
             	<Input s={12} m={10}
                 type='select'
                 label="Type"
                 defaultValue={input.questionType}
+                onChange={(e)=>updateInputSelect(this.props.keyProp,e.target.value)}
               >
               		<option value='yes/no'>Yes/No</option>
               		<option value='number'>Number</option>

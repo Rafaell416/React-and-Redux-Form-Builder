@@ -7,9 +7,14 @@ export const addInput = (questionText, questionType) => ({
   questionType
 })
 
-export const updateInput = (id, newQuestionText, newQuestionType) => {
-  type: 'UPDATE_INPUT',
+export const updateInputText = (id, newQuestionText) => ({
+  type: 'UPDATE_INPUT_TEXT',
   id,
-  newQuestionText,
+  newQuestionText
+})
+
+export const updateInputSelect = (id, newQuestionType) => ({
+  type: 'UPDATE_INPUT_SELECT',
+  id,
   newQuestionType
-}
+})
