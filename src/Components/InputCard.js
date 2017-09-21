@@ -36,10 +36,13 @@ export default class InputCard extends Component {
           }>
       		  <Row>
               <Input
+                defaultValue={input.questionText}
                 placeholder={input.questionText}
                 s={12} m={10}
                 label="Question"
-                onChange={(e)=>updateInputText(inputId,e.target.value)}
+                onBlur={(e)=>{
+                  updateInputText(inputId,e.target.value)}
+                }
               />
             </Row>
             <Row>
@@ -60,3 +63,5 @@ export default class InputCard extends Component {
     )
   }
 }
+
+//updateInputText(inputId,e.target.value)
