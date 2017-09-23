@@ -4,6 +4,7 @@ const inputs = (state=[], action) => {
       return [
         ...state,
         {
+          familyId: action.familyId,
           id: action.id,
           questionText: action.questionText,
           questionType: action.questionType,
@@ -30,7 +31,7 @@ const inputs = (state=[], action) => {
     case 'DELETE_INPUT':
       const inputId = action.id
       return state.filter(input => input.id !== inputId)
-        
+
     default:
       return state
   }

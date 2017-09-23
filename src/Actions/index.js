@@ -2,6 +2,7 @@ import {v4} from 'uuid'
 //let id = 0
 export const addInput = (questionText, questionType) => ({
   type: 'ADD_INPUT',
+  familyId: v4(),
   id: v4(),
   questionText,
   questionType
@@ -33,4 +34,3 @@ export const addSubInput = (parentId, condition, answer, questionText, questionT
   condition,
   answer
 })
-

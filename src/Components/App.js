@@ -9,7 +9,7 @@ export default class App extends Component {
       <div className='container'>
         <div className="row">
           <div className='col s12'>
-            <Header title='Indio Form Builder'/>
+            <Header title='Form Builder'/>
             <FormTabs />
           </div>
         </div>
