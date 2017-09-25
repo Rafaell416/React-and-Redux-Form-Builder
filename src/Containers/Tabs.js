@@ -4,7 +4,7 @@ import InputCardList from '../Components/InputCardList'
 import SubInputCard from '../Components/SubInputCard'
 import { connect } from 'react-redux'
 import {
-  updateInputText, 
+  updateInputText,
   updateInputSelect,
   deleteInput,
   addSubInput

@@ -8,6 +8,7 @@ const inputs = (state=[], action) => {
           id: action.id,
           questionText: action.questionText,
           questionType: action.questionType,
+          children: action.children
         }
       ]
     case 'UPDATE_INPUT_TEXT':
@@ -31,7 +32,23 @@ const inputs = (state=[], action) => {
     case 'DELETE_INPUT':
       const inputId = action.id
       return state.filter(input => input.id !== inputId)
-
+    case 'ADD_SUB_INPUT':
+        return state.map(arr =>
+          (arr.familyId === action.familyId)
+            ? {
+                ...arr,
+                  children: arr.children.concat({
+                    familyId: action.familyId,
+                    fatherId: action.fatherId,
+                    id: action.id,
+                    questionText: action.questionText,
+                    questionType: action.questionType,
+                    condition: action.condition,
+                    answer: action.answer
+                  })
+              }
+            : arr
+        )
     default:
       return state
   }

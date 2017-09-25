@@ -19,11 +19,12 @@ export default class InputCard extends Component {
     let Id = this.props.keyProp
 
     let addSubInput = this.props.addSubInput
-    /*let condition = 'equals'
+    let familyId = this.props.familyId
+    let fatherId = inputId
+    let condition = 'equals'
     let answer = 'yes'
-    let questionText = 'Hello World'
+    let questionText = 'Do you like React?'
     let questionType = 'yes/no'
-    onClick={()=>addSubInput(Id)}*/
     return (
       <Col m={9} s={12}>
       		<Card key={Id}
@@ -32,7 +33,14 @@ export default class InputCard extends Component {
               [
                 <div className='row'>
                   <div className='col s12 m5 offset-m3'>
-                    <Button waves='light' >
+                    <Button waves='light' onClick={()=>addSubInput(
+                      familyId,
+                      fatherId,
+                      condition,
+                      answer,
+                      questionText,
+                      questionType
+                    )}>
                       Add Sub-Input<Icon right>add</Icon>
                     </Button>
                   </div>

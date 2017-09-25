@@ -16,6 +16,7 @@ export default class InputCardList extends Component {
               key={input.id}
               keyProp={input.id}
               input={input}
+              familyId={input.familyId}
               updateInputText={updateInputText}
               updateInputSelect={updateInputSelect}
               deleteInput={deleteInput}

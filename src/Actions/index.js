@@ -5,7 +5,8 @@ export const addInput = (questionText, questionType) => ({
   familyId: v4(),
   id: v4(),
   questionText,
-  questionType
+  questionType,
+  children: []
 })
 
 export const updateInputText = (id, newQuestionText) => ({
@@ -25,9 +26,10 @@ export const deleteInput = (id) => ({
   id
 })
 
-export const addSubInput = (parentId, condition, answer, questionText, questionType) => ({
+export const addSubInput = (familyId, fatherId, condition, answer, questionText, questionType) => ({
   type: 'ADD_SUB_INPUT',
-  parentId,
+  familyId,
+  fatherId,
   id: v4(),
   questionText,
   questionType,
