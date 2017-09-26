@@ -3,6 +3,7 @@ import InputCard from './InputCard'
 
 
 export default class InputCardList extends Component {
+
   render(){
     let inputs = this.props.inputs
     let updateInputText = this.props.updateInputText
@@ -16,7 +17,6 @@ export default class InputCardList extends Component {
               key={input.id}
               keyProp={input.id}
               input={input}
-              inputs={inputs}
               familyId={input.familyId}
               updateInputText={updateInputText}
               updateInputSelect={updateInputSelect}

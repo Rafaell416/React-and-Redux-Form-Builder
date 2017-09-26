@@ -8,6 +8,7 @@ import {
   Input
 } from 'react-materialize'
 import SubInputCardList from './SubInputCardList'
+import { getChildren } from '../Utils/getChildren'
 
 
 export default class InputCard extends Component {
@@ -27,6 +28,10 @@ export default class InputCard extends Component {
     let answer = 'yes'
     let questionText = 'Do you like React?'
     let questionType = 'yes/no'
+
+    let children = getChildren(input, familyId, fatherId)
+
+    console.log(children)
     return (
       <Col m={9} s={12} className='red'>
       		<Card key={Id}
@@ -80,9 +85,7 @@ export default class InputCard extends Component {
       		</Card>
             <Col m={12} className='right'>
               <SubInputCardList
-                inputs={inputs}
-                familyId={familyId}
-                fatherId={fatherId}
+                children={children}
               />
             </Col>
       </Col>
