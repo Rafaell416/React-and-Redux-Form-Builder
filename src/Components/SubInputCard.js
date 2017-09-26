@@ -13,7 +13,7 @@ export default class SubInputCard extends Component {
   render () {
     let condition = this.props.condition
     return (
-      <Col m={12} s={12}>
+      <Col m={12} s={12} className='offset-m1'>
       		<Card key={1}
             className='grey lighten-2'
             actions={
