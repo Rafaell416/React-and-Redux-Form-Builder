@@ -78,7 +78,7 @@ export default class InputCard extends Component {
             	</Input>
             </Row>
       		</Card>
-            <Col m={12} className='right'>
+            <Col m={12}>
               <SubInputCardList
                 inputs={inputs}
                 familyId={familyId}

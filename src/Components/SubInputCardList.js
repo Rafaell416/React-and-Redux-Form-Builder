@@ -10,6 +10,7 @@ export default class SubInputCardList extends Component {
     let fatherId = this.props.fatherId
     let familyId = this.props.familyId
     let children = getChildren(inputs, familyId, fatherId)
+    console.log(children)
     return (
       <div>
         {children.map((child) =>
