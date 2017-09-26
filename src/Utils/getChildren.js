@@ -11,12 +11,8 @@ function subinputs (input, familyId, fatherId) {
     return sub
 }
 
-<<<<<<< HEAD
-export function getChildren (inputs, familyId, fatherId) {
-  let res = subinputs(inputs, familyId, fatherId)
-=======
+
 export function getChildren (input, familyId, fatherId) {
   let res = subinputs(input, familyId, fatherId)
->>>>>>> object
   return res
 }
