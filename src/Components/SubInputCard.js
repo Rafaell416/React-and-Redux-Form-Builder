@@ -12,6 +12,9 @@ import {
 export default class SubInputCard extends Component {
   render () {
     let condition = this.props.condition
+    let answer = this.props.answer
+    let questionText = this.props.questionText
+    let questionType = this.props.questionType
     return (
       <Col m={12} s={12} className='offset-m1'>
       		<Card key={1}
@@ -44,6 +47,7 @@ export default class SubInputCard extends Component {
                 placeholder='answer condition'
                 s={12} m={4}
                 label="Answer"
+                defaultValue={answer}
               />
             </Row>
             <Row>
@@ -51,13 +55,14 @@ export default class SubInputCard extends Component {
                 placeholder='Type a Question here'
                 s={12} m={10}
                 label="Question"
+                defaultValue={questionText}
               />
             </Row>
             <Row>
               <Input s={12} m={10}
                 type='select'
                 label="Type"
-                defaultValue='yes/no'
+                defaultValue={questionType}
               >
                 <option value='yes/no'>Yes/No</option>
                 <option value='text'>Text</option>
