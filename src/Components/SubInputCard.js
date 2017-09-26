@@ -11,8 +11,9 @@ import {
 
 export default class SubInputCard extends Component {
   render () {
+    let condition = this.props.condition
     return (
-      <Col m={9} s={12}>
+      <Col m={12} s={12}>
       		<Card key={1}
             className='grey lighten-2'
             actions={
@@ -33,7 +34,7 @@ export default class SubInputCard extends Component {
             	<Input s={12} m={8}
                 type='select'
                 label="Condition"
-                defaultValue='equals'
+                defaultValue={condition}
               >
               		<option value='equals'>Equals</option>
               		<option value='greater-than'>Greather Than</option>

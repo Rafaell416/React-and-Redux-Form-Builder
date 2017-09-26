@@ -7,10 +7,12 @@ import {
   Row,
   Input
 } from 'react-materialize'
+import SubInputCardList from './SubInputCardList'
 
 
 export default class InputCard extends Component {
   render () {
+    let inputs = this.props.inputs
     let input = this.props.input
     let updateInputText = this.props.updateInputText
     let updateInputSelect = this.props.updateInputSelect
@@ -26,7 +28,7 @@ export default class InputCard extends Component {
     let questionText = 'Do you like React?'
     let questionType = 'yes/no'
     return (
-      <Col m={9} s={12}>
+      <Col m={9} s={12} className='red'>
       		<Card key={Id}
             className='grey lighten-2'
             actions={
@@ -76,6 +78,13 @@ export default class InputCard extends Component {
             	</Input>
             </Row>
       		</Card>
+            <Col m={12} className='right'>
+              <SubInputCardList
+                inputs={inputs}
+                familyId={familyId}
+                fatherId={fatherId}
+              />
+            </Col>
       </Col>
 
     )
