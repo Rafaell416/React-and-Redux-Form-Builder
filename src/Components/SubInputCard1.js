@@ -43,7 +43,7 @@ export default class SubInputCard1 extends Component {
                 type='select'
                 label="Condition"
                 defaultValue={condition}
-                onChange={(e)=>updateSubInputCondition(familyId, id, e.target.value)}
+                onChange={(e)=>updateSubInputCondition(familyId, fatherId, id, e.target.value)}
               >
               		<option value='equals'>Equals</option>
               		<option value='greater-than'>Greather Than</option>
