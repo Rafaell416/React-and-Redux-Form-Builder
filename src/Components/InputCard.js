@@ -13,7 +13,7 @@ import { getChildren } from '../Utils/getChildren'
 
 export default class InputCard extends Component {
   render () {
-    let inputs = this.props.inputs
+    //let inputs = this.props.inputs
     let input = this.props.input
     let updateInputText = this.props.updateInputText
     let updateInputSelect = this.props.updateInputSelect
@@ -22,6 +22,7 @@ export default class InputCard extends Component {
     let Id = this.props.keyProp
 
     let addSubInput = this.props.addSubInput
+    let deleteSubInput = this.props.deleteSubInput
     let familyId = this.props.familyId
     let fatherId = inputId
     let condition = 'equals'
@@ -31,9 +32,8 @@ export default class InputCard extends Component {
 
     let children = getChildren(input, familyId, fatherId)
 
-    console.log(children)
     return (
-      <Col m={9} s={12} className='red'>
+      <Col m={9} s={12} >
       		<Card key={Id}
             className='grey lighten-2'
             actions={
@@ -86,6 +86,7 @@ export default class InputCard extends Component {
             <Col m={12}>
               <SubInputCardList
                 children={children}
+                deleteSubInput={deleteSubInput}
               />
             </Col>
       </Col>

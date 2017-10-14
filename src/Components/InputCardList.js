@@ -10,6 +10,7 @@ export default class InputCardList extends Component {
     let updateInputSelect = this.props.updateInputSelect
     let deleteInput = this.props.deleteInput
     let addSubInput = this.props.addSubInput
+    let deleteSubInput = this.props.deleteSubInput
     return (
       <div>
         {inputs.map((input) =>
@@ -22,6 +23,7 @@ export default class InputCardList extends Component {
               updateInputSelect={updateInputSelect}
               deleteInput={deleteInput}
               addSubInput={addSubInput}
+              deleteSubInput={deleteSubInput}
             />
           )}
       </div>

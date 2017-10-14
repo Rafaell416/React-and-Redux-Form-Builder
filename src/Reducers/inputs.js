@@ -49,6 +49,16 @@ const inputs = (state=[], action) => {
               }
             : arr
         )
+   case 'DELETE_SUB_INPUT':
+        const SubInputId = action.id
+        return state.map(arr =>
+          (arr.familyId === action.familyId)
+            ? {
+                ...arr,
+                children: arr.children.filter(SubInput => SubInput.id !== SubInputId)
+              }
+            : arr
+        )
     default:
       return state
   }

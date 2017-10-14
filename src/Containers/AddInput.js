@@ -4,7 +4,6 @@ import {addInput} from '../Actions'
 import {Button} from 'react-materialize'
 
 
-
 class AddInput extends Component {
   render(){
     let question = 'type a question here?'

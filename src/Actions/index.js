@@ -1,5 +1,5 @@
 import {v4} from 'uuid'
-//let id = 0
+
 export const addInput = (questionText, questionType) => ({
   type: 'ADD_INPUT',
   familyId: v4(),
@@ -35,4 +35,11 @@ export const addSubInput = (familyId, fatherId, condition, answer, questionText,
   questionType,
   condition,
   answer
+})
+
+export const deleteSubInput = (familyId, fatherId, id) => ({
+  type: 'DELETE_SUB_INPUT',
+  familyId,
+  fatherId,
+  id
 })

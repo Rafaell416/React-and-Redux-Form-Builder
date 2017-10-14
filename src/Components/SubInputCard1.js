@@ -9,15 +9,19 @@ import {
 } from 'react-materialize'
 
 
-export default class SubInputCard extends Component {
+export default class SubInputCard1 extends Component {
   render () {
     let condition = this.props.condition
     let answer = this.props.answer
     let questionText = this.props.questionText
     let questionType = this.props.questionType
+    let deleteSubInput = this.props.deleteSubInput
+    let id = this.props.keyProp
+    let familyId = this.props.familyId
+    let fatherId = this.props.fatherId
     return (
       <Col m={12} s={12} className='offset-m1'>
-      		<Card key={1}
+      		<Card key={id}
             className='grey lighten-2'
             actions={
               [
@@ -26,7 +30,7 @@ export default class SubInputCard extends Component {
                     <Button waves='light'>Add Sub-Input<Icon right>add</Icon></Button>
                   </div>
                   <div className='col s12 m4 right'>
-                    <Button waves='light'>
+                    <Button waves='light' onClick={()=>deleteSubInput(familyId, fatherId, id)}>
                       Delete<Icon right>delete</Icon>
                     </Button>
                   </div>
