@@ -7,7 +7,8 @@ import {
   updateInputSelect,
   deleteInput,
   addSubInput,
-  deleteSubInput
+  deleteSubInput,
+  updateSubInputCondition
 } from '../Actions'
 import '../Styles/App.css'
 import {
@@ -27,6 +28,7 @@ class FormTabs extends Component {
               deleteInput={this.props.deleteInput}
               addSubInput={this.props.addSubInput}
               deleteSubInput={this.props.deleteSubInput}
+              updateSubInputCondition={this.props.updateSubInputCondition}
             />
             <div className='contenedor-flex'>
                 <AddInput />
@@ -52,7 +54,8 @@ const mapDispatchToProps = {
   updateInputSelect,
   deleteInput,
   addSubInput,
-  deleteSubInput
+  deleteSubInput,
+  updateSubInputCondition
 }
 
 FormTabs = connect(

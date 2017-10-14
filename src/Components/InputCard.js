@@ -23,6 +23,7 @@ export default class InputCard extends Component {
 
     let addSubInput = this.props.addSubInput
     let deleteSubInput = this.props.deleteSubInput
+    let updateSubInputCondition = this.props.updateSubInputCondition
     let familyId = this.props.familyId
     let fatherId = inputId
     let condition = 'equals'
@@ -87,6 +88,7 @@ export default class InputCard extends Component {
               <SubInputCardList
                 children={children}
                 deleteSubInput={deleteSubInput}
+                updateSubInputCondition={updateSubInputCondition}
               />
             </Col>
       </Col>

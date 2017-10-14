@@ -16,6 +16,7 @@ export default class SubInputCard1 extends Component {
     let questionText = this.props.questionText
     let questionType = this.props.questionType
     let deleteSubInput = this.props.deleteSubInput
+    let updateSubInputCondition = this.props.updateSubInputCondition
     let id = this.props.keyProp
     let familyId = this.props.familyId
     let fatherId = this.props.fatherId
@@ -42,6 +43,7 @@ export default class SubInputCard1 extends Component {
                 type='select'
                 label="Condition"
                 defaultValue={condition}
+                onChange={(e)=>updateSubInputCondition(familyId, id, e.target.value)}
               >
               		<option value='equals'>Equals</option>
               		<option value='greater-than'>Greather Than</option>

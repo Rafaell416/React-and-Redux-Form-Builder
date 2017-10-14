@@ -6,6 +6,7 @@ export default class SubInputCardList extends Component {
   render(){
     let children = this.props.children
     let deleteSubInput = this.props.deleteSubInput
+    let updateSubInputCondition = this.props.updateSubInputCondition
     return (
       <div>
         {children.map((child) =>
@@ -20,6 +21,7 @@ export default class SubInputCardList extends Component {
               questionText={child.questionText}
               questionType={child.questionType}
               deleteSubInput={deleteSubInput}
+              updateSubInputCondition={updateSubInputCondition}
             />
           )}
       </div>

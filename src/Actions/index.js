@@ -43,3 +43,11 @@ export const deleteSubInput = (familyId, fatherId, id) => ({
   fatherId,
   id
 })
+
+export const updateSubInputCondition = (familyId, fatherId, id, newSubInputCondition) => ({
+  type: 'UPDATE_SUB_INPUT_CONDITION',
+  familyId,
+  fatherId,
+  id,
+  newSubInputCondition
+})

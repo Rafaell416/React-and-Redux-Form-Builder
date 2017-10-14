@@ -11,6 +11,7 @@ export default class InputCardList extends Component {
     let deleteInput = this.props.deleteInput
     let addSubInput = this.props.addSubInput
     let deleteSubInput = this.props.deleteSubInput
+    let updateSubInputCondition= this.props.updateSubInputCondition
     return (
       <div>
         {inputs.map((input) =>
@@ -24,6 +25,7 @@ export default class InputCardList extends Component {
               deleteInput={deleteInput}
               addSubInput={addSubInput}
               deleteSubInput={deleteSubInput}
+              updateSubInputCondition={updateSubInputCondition}
             />
           )}
       </div>
