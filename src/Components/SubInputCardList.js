@@ -17,6 +17,7 @@ export default class SubInputCardList extends Component {
               key={child.id}
               keyProp={child.id}
               child={child}
+              children={children}
               familyId={child.familyId}
               fatherId={child.fatherId}
               answer={child.answer}

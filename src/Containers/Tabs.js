@@ -19,8 +19,13 @@ import {
   Tab
 } from 'react-materialize'
 
+import JsonView from 'react-pretty-json'
+import 'react-pretty-json/assets/json-view.css'
+
 class FormTabs extends Component {
   render(){
+    let json = this.props.inputs
+    let data = JSON.stringify(json)
     return(
       <Tabs className='tab-demo z-depth-1'>
           <Tab title="create" active>
@@ -41,10 +46,10 @@ class FormTabs extends Component {
             </div>
           </Tab>
           <Tab title="preview" >
-            preview
+            Preview
           </Tab>
           <Tab title="export">
-            export
+            <JsonView json={data} spaces={10}/>
           </Tab>
       </Tabs>
     )

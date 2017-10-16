@@ -5123,6 +5123,12 @@ react-materialize@^1.0.13:
     react "^15.4.2"
     react-dom "^15.4.2"
 
+react-pretty-json@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/react-pretty-json/-/react-pretty-json-2.0.2.tgz#dae2e24f3a2e18296efcb462f272ff13803d3729"
+  dependencies:
+    react "^15.3.0"
+
 react-redux@^5.0.6:
   version "5.0.6"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.6.tgz#23ed3a4f986359d68b5212eaaa681e60d6574946"
@@ -5179,6 +5185,16 @@ react-scripts@1.0.13:
 "react@^15 || ^16", react@^15.4.2, react@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
+  dependencies:
+    create-react-class "^15.6.0"
+    fbjs "^0.8.9"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+    prop-types "^15.5.10"
+
+react@^15.3.0:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
   dependencies:
     create-react-class "^15.6.0"
     fbjs "^0.8.9"
