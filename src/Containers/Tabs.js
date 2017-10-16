@@ -25,7 +25,6 @@ import 'react-pretty-json/assets/json-view.css'
 class FormTabs extends Component {
   render(){
     let json = this.props.inputs
-    let data = JSON.stringify(json)
     return(
       <Tabs className='tab-demo z-depth-1'>
           <Tab title="create" active>
@@ -49,7 +48,7 @@ class FormTabs extends Component {
             Preview
           </Tab>
           <Tab title="export">
-            <JsonView json={data} spaces={10}/>
+              <JsonView json={json} spaces={4}/>
           </Tab>
       </Tabs>
     )
