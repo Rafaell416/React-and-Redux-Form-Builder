@@ -13,10 +13,36 @@ import QuestionTitle from './QuestionTitle'
 export default class QuestionCard extends Component {
   render () {
     const title = this.props.question.questionText
-    return (
-          <Card className='grey  z-depth-0'>
-            <QuestionTitle title={title}/>
-          </Card>
-    )
+    const questionType = this.props.question.questionType
+    {
+      switch (questionType) {
+        case 'yes/no':
+          return (
+            <Card className='white  z-depth-0'>
+              <QuestionTitle title={title}/>
+              <RadioButtons />
+            </Card>
+          )
+          break;
+        case 'number':
+          return (
+            <Card className='white  z-depth-0'>
+              <QuestionTitle title={title}/>
+              <InputNumber />
+            </Card>
+          )
+          break;
+        case 'text':
+          return (
+            <Card className='white  z-depth-0'>
+              <QuestionTitle title={title}/>
+              <InputText />
+            </Card>
+          )
+          break;
+        default:
+          return null
+      }
+    }
   }
 }
