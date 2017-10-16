@@ -75,6 +75,22 @@ const inputs = (state=[], action) => {
               }
             : arr
         )
+    case 'UPDATE_SUB_INPUT_ANSWER':
+        return state.map(arr =>
+          (arr.familyId === action.familyId)
+            ? {
+                ...arr,
+                children: arr.children.map(i =>
+                  (i.id === action.id)
+                    ? {
+                        ...i,
+                        answer: action.newSubInputAnswer
+                      }
+                    : i
+                )
+              }
+            : arr
+        )
     default:
       return state
   }
