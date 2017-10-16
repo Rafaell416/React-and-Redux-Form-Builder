@@ -67,3 +67,11 @@ export const updateSubInputQuestion = (familyId, fatherId, id, newSubInputQuesti
   id,
   newSubInputQuestion
 })
+
+export const updateSubInputQuestionType = (familyId, fatherId, id, newSubInputQuestionType) => ({
+  type: 'UPDATE_SUB_INPUT_QUESTION_TYPE',
+  familyId,
+  fatherId,
+  id,
+  newSubInputQuestionType
+})

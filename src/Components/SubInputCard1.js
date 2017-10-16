@@ -19,6 +19,7 @@ export default class SubInputCard1 extends Component {
     let updateSubInputCondition = this.props.updateSubInputCondition
     let updateSubInputAnswer = this.props.updateSubInputAnswer
     let updateSubInputQuestion = this.props.updateSubInputQuestion
+    let updateSubInputQuestionType = this.props.updateSubInputQuestionType
 
     let id = this.props.keyProp
     let familyId = this.props.familyId
@@ -73,6 +74,7 @@ export default class SubInputCard1 extends Component {
               <Input s={12} m={10}
                 type='select'
                 label="Type"
+                onChange={(e)=>updateSubInputQuestionType(familyId, fatherId, id, e.target.value)}
                 defaultValue={questionType}
               >
                 <option value='yes/no'>Yes/No</option>

@@ -26,6 +26,7 @@ export default class InputCard extends Component {
     let updateSubInputCondition = this.props.updateSubInputCondition
     let updateSubInputAnswer = this.props.updateSubInputAnswer
     let updateSubInputQuestion = this.props.updateSubInputQuestion
+    let updateSubInputQuestionType = this.props.updateSubInputQuestionType
 
     let familyId = this.props.familyId
     let fatherId = inputId
@@ -95,6 +96,7 @@ export default class InputCard extends Component {
                 updateSubInputCondition={updateSubInputCondition}
                 updateSubInputAnswer={updateSubInputAnswer}
                 updateSubInputQuestion={updateSubInputQuestion}
+                updateSubInputQuestionType={updateSubInputQuestionType}
               />
             </Col>
       </Col>
