@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import AddInput from './AddInput'
 import InputCardList from '../Components/InputCardList'
+import PreviewForm from '../Components/PreviewForm'
 import { connect } from 'react-redux'
 import {
   updateInputText,
@@ -16,7 +17,7 @@ import {
 import '../Styles/App.css'
 import {
   Tabs,
-  Tab
+  Tab,
 } from 'react-materialize'
 
 import JsonView from 'react-pretty-json'
@@ -45,7 +46,7 @@ class FormTabs extends Component {
             </div>
           </Tab>
           <Tab title="preview" >
-            Preview
+            <PreviewForm />
           </Tab>
           <Tab title="export">
               <JsonView json={json} spaces={4}/>
