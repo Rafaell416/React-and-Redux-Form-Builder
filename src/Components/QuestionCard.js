@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import {
-  Col,
   Card
 } from 'react-materialize'
 

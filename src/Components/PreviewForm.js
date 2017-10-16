@@ -4,10 +4,6 @@ import {
   Card
 } from 'react-materialize'
 
-import RadioButtons from './RadioButtons'
-import InputText from './InputText'
-import InputNumber from './InputNumber'
-import QuestionTitle from './QuestionTitle'
 import QuestionCard from './QuestionCard'
 
 
