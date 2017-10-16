@@ -18,6 +18,7 @@ export default class SubInputCard1 extends Component {
     let deleteSubInput = this.props.deleteSubInput
     let updateSubInputCondition = this.props.updateSubInputCondition
     let updateSubInputAnswer = this.props.updateSubInputAnswer
+    let updateSubInputQuestion = this.props.updateSubInputQuestion
 
     let id = this.props.keyProp
     let familyId = this.props.familyId
@@ -64,6 +65,7 @@ export default class SubInputCard1 extends Component {
                 placeholder='Type a Question here'
                 s={12} m={10}
                 label="Question"
+                onBlur={(e)=>updateSubInputQuestion(familyId, fatherId, id, e.target.value)}
                 defaultValue={questionText}
               />
             </Row>
