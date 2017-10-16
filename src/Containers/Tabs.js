@@ -46,7 +46,7 @@ class FormTabs extends Component {
             </div>
           </Tab>
           <Tab title="preview" >
-            <PreviewForm />
+            <PreviewForm data={json}/>
           </Tab>
           <Tab title="export">
               <JsonView json={json} spaces={4}/>
