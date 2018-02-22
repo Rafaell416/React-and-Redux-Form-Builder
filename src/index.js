@@ -6,11 +6,6 @@ import { Provider } from 'react-redux'
 import App from './Components/App'
 import reducer from './Reducers'
 import {loadState, saveState} from './localStorage'
-//import {throttle} from 'lodash/throttle'
-//remember use throttle for saving state every one second,
-//not every time state is changed
-
-//import {addInput} from './Actions'
 
 const persistedState = loadState()
 const store = createStore(

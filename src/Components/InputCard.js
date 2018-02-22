@@ -36,7 +36,6 @@ export default class InputCard extends Component {
     let questionType = 'yes/no'
 
     let children = getChildren(input, familyId, fatherId)
-    console.log('CHILDREN',children)
 
     return (
       <Col m={9} s={12} >
